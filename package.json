@@ -1,0 +1,26 @@
+{
+  "name": "budget-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm run workbox && node server.js",
+    "workbox": "workbox generateSW workbox-config.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite-server": "lite-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "lite-server": "^2.5.3",
+    "mongoose": "^5.5.15",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.12"
+  },
+  "devDependencies": {
+    "workbox-cli": "^6.1.5"
+  }
+}
