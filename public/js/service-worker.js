@@ -28,14 +28,14 @@ self.addEventListener('activate', (event) => {
         caches
             .keys()
             .then((keyList) => {
-                return Promise.all(
-                    keyList.map((key) => {
-                        if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
-                            return caches.delete(key);
-                        }
-                    })
-                );
+            return Promise.all(
+                keyList.map((key) => {
+                    if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
+                    return caches.delete(key);
+            }
             })
+        );
+        })
     );
     self.clients.claim()
 });
@@ -48,9 +48,25 @@ self.addEventListener("fetch", (event) => {
                 .open(DATA_CACHE_NAME)
                 .then((cache) => {
                     return fetch(event.request)
-                        .then((response) => {
-                            // If the response was good, clone it and store it in the cache.
-                            if (response.status === 200) {
-                                cache.put(event.request, response.clone());
-                            }
+                    .then((response) => {
+                    if (response.status === 200) {
+                        cache.put(event.request, response.clone());
+                        }
+                        return response;
+                        })
+                        .catch(() => {
+                            // Network request failed, try to get it from the cache.
+                            return cache.match(event.request);
+                        });
+                })
+                .catch((err) => console.log(err))
+        );
+        return;
+    }
+    event.respondWith(
+        caches.match(event.request).then((response) => {
+            return response || fetch(event.request);
+        })
+    );
+});
 
