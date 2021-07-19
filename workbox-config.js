@@ -5,11 +5,11 @@ module.exports = {
 	runtimeCaching: [
 		{
 		urlPattern: 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
-		handler: 'cacheFirst'
+		handler: 'CacheFirst'
 		},
 		{
 			urlPattern: 'https://cdn.jsdelivr.net/npm/chart.js@2.8.0',
-			handler: 'cacheFirst'
+			handler: 'CacheFirst'
 		},
 		{
 			urlPattern: /api/,
