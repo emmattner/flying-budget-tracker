@@ -1,3 +1,4 @@
+
 # Flying Budget Tracker
 
 ## Table of Contents
@@ -7,26 +8,26 @@
 * [Usage Information](#usage-information)
 * [Application ScreenShots](#application-screenshots)
 * [Contributors](#contributors)
-* [Deployment Link](#deployment-link-and-walk-through-video)
+* [Deployment Link](#deployment-link)
 * [Questions](#questions)
 
 
 ## Description
-This is an E-commerce application which uses ``'express.js'`` API that syncs ``'sequelize'`` models to interact with the ``'MySQL'`` database. This gives users access to their fundamental architecture of the database. 
+This application is used to give users access to a budget tracker whilst offline. The user will be able to add expenses and deposits to their budget with or without a connection. When entering transactions offline, they should populate the total when brought back online.
 
 ## Installation Instructions
-The user can clone the repository from Github into their directory and open the integrated terminal and ``'npm install'`` all necessary dependencies. Run ``'npm run seed'`` to integrate the seed data to the ``'MySQL'`` database. Run ``'npm start'`` to start data being acessed through insomnia. 
+The user can clone the repository from Github into their directory and open the integrated terminal and ``'npm install'`` all necessary dependencies. Then run ``'npm start'`` to start listening on port ``'https//localhost:3000'``.
 
 ## Usage Information
-The application provides the user with access to the databse through mySQL and Insomnia to either view all the data, update data, post data or delete data through specific routes, this is helped by using the following dependencies:
-* Sequelize
+The application is helped by using the following dependencies:
+* Workbox-cli
 * Node
-* MySQL
 * Dotenv
 * Express
+* Mongoose
 
 ## Application ScreenShots
-
+<img width="1134" alt="budget-tracker" src="https://user-images.githubusercontent.com/78684306/126172589-10b7369b-f917-408f-8f55-71a018ebeacd.png">
 
 
 
@@ -34,8 +35,7 @@ The application provides the user with access to the databse through mySQL and I
 Emma Mattner
 
 
-## Deployment Link and Walk Through Video
-
+## Deployment Link 
 
 
 ## Questions
