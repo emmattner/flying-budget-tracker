@@ -39,3 +39,18 @@ self.addEventListener('activate', (event) => {
     );
     self.clients.claim()
 });
+
+self.addEventListener("fetch", (event) => {
+    // cache successful GET requests to the API
+    if (event.request.url.includes("/api/") && event.request.method === "GET") {
+        event.respondWith(
+            caches
+                .open(DATA_CACHE_NAME)
+                .then((cache) => {
+                    return fetch(event.request)
+                        .then((response) => {
+                            // If the response was good, clone it and store it in the cache.
+                            if (response.status === 200) {
+                                cache.put(event.request, response.clone());
+                            }
+
