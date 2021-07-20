@@ -11,18 +11,18 @@ function saveRecord(transaction){
 
 async function getAllTransactions() {
     const transactions = await db.pending_transaction.toArray();
-    console.log(transactions);
+    console.log({ transactions });
+    if (transactions.length > 0) {
     fetch('/api/transaction/bulk', {
         method: "POST",
         body: JSON.stringify(transactions),
         headers: {
             Accept: 'application/json, text/plain, */*',
             'Content-Type': 'application/json'
-        }
+            }
+        });  
     }
-    ).then(db.pending_transaction.clear)};
-    
-    
+}    
 
 
 if (navigator.onLine) {
