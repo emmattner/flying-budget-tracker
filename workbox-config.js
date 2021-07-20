@@ -12,6 +12,10 @@ module.exports = {
 			handler: 'CacheFirst'
 		},
 		{
+			urlPattern: 'https://unpkg.com/dexie@latest/dist/dexie.js',
+			handler: 'CacheFirst'
+		},
+		{
 			urlPattern: /api/,
 			handler: 'StaleWhileRevalidate'
 		}
