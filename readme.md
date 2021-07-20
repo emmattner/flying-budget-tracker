@@ -28,6 +28,9 @@ The application is helped by using the following dependencies:
 
 ## Application ScreenShots
 <img width="1134" alt="budget-tracker" src="https://user-images.githubusercontent.com/78684306/126172589-10b7369b-f917-408f-8f55-71a018ebeacd.png">
+<br>
+![budget-tracker2](https://user-images.githubusercontent.com/78684306/126283041-1c260019-49c2-477d-87e2-0f8f456c907f.png)
+
 
 
 
