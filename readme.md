@@ -11,7 +11,6 @@
 * [Deployment Link](#deployment-link)
 * [Questions](#questions)
 
-
 ## Description
 This application is used to give users access to a budget tracker whilst offline. The user will be able to add expenses and deposits to their budget with or without a connection. When entering transactions offline, they should populate the total when brought back online.
 
@@ -29,7 +28,7 @@ The application is helped by using the following dependencies:
 ## Application ScreenShots
 <img width="1134" alt="budget-tracker" src="https://user-images.githubusercontent.com/78684306/126172589-10b7369b-f917-408f-8f55-71a018ebeacd.png">
 
-
+<img width="1134" alt="budget-tracker" src="https://user-images.githubusercontent.com/78684306/126283268-bc94df76-559c-4176-b7e4-5a50fc9778f3.png">
 
 ## Contributors
 Emma Mattner
